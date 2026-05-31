@@ -1,0 +1,91 @@
+/* ── Reset & base ─────────────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a14;
+  color: rgba(255, 255, 255, 0.85);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+button { font-family: inherit; }
+
+/* ── Design tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --color-brand-600: #6d28d9;
+  --color-brand-500: #7c3aed;
+  --color-brand-400: #8b5cf6;
+  --color-brand-300: #a78bfa;
+  --color-brand-200: #c4b5fd;
+
+  --color-surface-950: #0a0a14;
+  --color-surface-900: #0f0f1a;
+  --color-surface-800: #16162a;
+
+  --color-glass-bg:     rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  --glow-brand: 0 0 50px rgba(124, 58, 237, 0.22);
+}
+
+/* ── Utility ──────────────────────────────────────────────────────────────── */
+.section { width: 100%; }
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* ── Custom scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.55); }
+
+/* ── Wave SVG divider helper ─────────────────────────────────────────────── */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+}
+
+/* ── Shimmer keyframe (used in portals) ──────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -800px 0; }
+  100% { background-position:  800px 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 25%,
+    rgba(255,255,255,0.09) 50%,
+    rgba(255,255,255,0.04) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+/* ── Pulse dot ──────────────────────────────────────────────────────────── */
+@keyframes pulse-ring {
+  0%   { transform: scale(0.7); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
