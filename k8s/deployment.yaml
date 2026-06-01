@@ -18,7 +18,7 @@ spec:
       imagePullSecrets: [{name: ghcr-pull-secret}]
       containers:
         - name: tcf-landing
-          image: ghcr.io/trungbq8/tcf-landing:sha-8ad19bfd0599a9ed9fcf5fe90df29dae5c28c3e6
+          image: ghcr.io/trungbq8/tcf-landing:sha-8a3d56dbedf143485b64c7e6cc84acbe98d3c3f0
           imagePullPolicy: Always
           ports:
             - containerPort: 80
