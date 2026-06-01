@@ -6,12 +6,12 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   ingressClassName: traefik
   tls:
     - hosts:
         - tokencashflow.com
-        - www.tokencashflow.com
       secretName: tcf-landing-tls
   rules:
     - host: tokencashflow.com
