@@ -11,17 +11,17 @@
           <div class="pricing-card__glow" />
           <div class="pricing-card__label">Service Fee</div>
           <div class="pricing-card__value">0.5<span class="pct">%</span></div>
-          <div class="pricing-card__desc">Applied to every payment amount in USD.</div>
+          <div class="pricing-card__desc">Base fee applied to every payment amount in USD.</div>
         </div>
 
         <div class="pricing-card">
-          <div class="pricing-card__label">Stablecoin settlement fee — USDT → USDT</div>
+          <div class="pricing-card__label">Stablecoin settlement fee → USDT</div>
           <div class="pricing-card__value">1.0<span class="pct">%</span></div>
           <div class="pricing-card__desc">Payer pays with stablecoins; merchant receives USDT.</div>
         </div>
 
         <div class="pricing-card">
-          <div class="pricing-card__label">Conversion Fee — Crypto → USDT</div>
+          <div class="pricing-card__label">Crypto settlement fee → USDT</div>
           <div class="pricing-card__value">2.0<span class="pct">%</span></div>
           <div class="pricing-card__desc">Payer pays with any other crypto; merchant receives USDT.</div>
         </div>
@@ -29,7 +29,7 @@
         <div class="pricing-card">
           <div class="pricing-card__label">Withdrawal Fee</div>
           <div class="pricing-card__value pricing-card__value--sm">Per-chain</div>
-          <div class="pricing-card__desc">Fixedfee per withdrawal, cover blockchain transaction costs entirely.</div>
+          <div class="pricing-card__desc">Fixed fee per withdrawal, cover blockchain transaction costs entirely.</div>
         </div>
       </div>
 
