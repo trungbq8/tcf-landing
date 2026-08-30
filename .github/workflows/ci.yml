@@ -57,7 +57,7 @@ jobs:
           ref: main
 
       - name: Bump image tag in tcf-gitops
-        uses: mikefarah/yq@v5
+        uses: mikefarah/yq@v4.53.6
         with:
           cmd: yq -i '.images[0].newTag = "sha-${{ github.sha }}"' tcf-gitops/apps/landing/overlays/prod/kustomization.yaml
 
